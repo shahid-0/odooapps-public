@@ -9,9 +9,13 @@
     'version': '18.0.1.0.0',
     'depends': ["point_of_sale"],
     'data': [
-        'views/views.xml',
-        'views/templates.xml',
+        "views/res_config_setting_views.xml"
     ],
+    'assets': {
+        'point_of_sale._assets_pos': [
+            'pos_product_stock_info/static/src/**/*',
+        ]
+    },
     'demo': [],
     'license': 'LGPL-3',
 }

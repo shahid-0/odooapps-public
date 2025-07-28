@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="pos_product_stock_info.ProductScreen" t-inherit="point_of_sale.ProductScreen" t-inherit-mode="extension">
+        <xpath expr="//ProductCard" position="attributes">
+            <t t-console="this.pos.config.hide_zero_stock" />
+            <attribute name="t-if">this.pos.config.hide_zero_stock and product.qty_available !== 0</attribute>
+<!--            <attribute name="t-if">this.pos.config.hide_zero_stock</attribute>-->
+        </xpath>
+    </t>
+</templates>
