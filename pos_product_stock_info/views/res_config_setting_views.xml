@@ -10,6 +10,9 @@
                 <setting id="pos_hide_zero_stock_items" help="Hide zero stock products based on 'On Hand Quantity'">
                     <field name="pos_hide_zero_stock" />
                 </setting>
+                <setting id="pos_restrict_zero_stock_items" help="Restrict zero stock products based on 'On Hand Quantity'">
+                    <field name="pos_restrict_zero_stock" />
+                </setting>
             </xpath>
         </field>
     </record>
