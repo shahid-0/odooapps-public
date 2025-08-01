@@ -26,6 +26,7 @@
             'pos_stock_visibility_restriction/static/src/**/*',
         ]
     },
+    'images': ['static/description/banner.gif'],
     'demo': [],
     'license': 'LGPL-3',
 }
