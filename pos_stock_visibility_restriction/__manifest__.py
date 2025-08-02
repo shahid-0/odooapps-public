@@ -14,7 +14,7 @@
         This module ensures that the POS system provides more efficient stock management and prevents errors associated with selling unavailable products. It’s especially useful for businesses with high inventory turnover or where stock levels are critical to sales accuracy.
     """,
     'author': "Shahid Khan",
-    'website': "https://apps.odoo.com/apps/modules/browse?search=Shahid+Khan",
+    'website': "https://github.com/shahid-0",
     'category': 'Point of Sale',
     'version': '18.0.1.0.0',
     'depends': ["point_of_sale"],
