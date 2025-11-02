@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+<!--Rule to hide menu items -->
+    <record id="sticky_note_rule_own_records" model="ir.rule">
+        <field name="name">Restrict Menu from Users</field>
+        <field name="model_id" ref="model_sticky_note"/>
+        <field name="domain_force">[('user_id','=',user.id)]</field>
+    </record>
+</odoo>

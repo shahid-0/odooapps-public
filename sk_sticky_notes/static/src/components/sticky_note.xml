@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+   <t t-name="systray_dropdown" owl="1">
+       <Dropdown>
+              <div class="new_icon">
+                  <div class="icon_div">
+                      <div class="toggle-icon" role="button">
+                          <i id='create_order'
+                             class="fa fa-lg fa-sticky-note-o"
+                             role="img" aria-label="Sale/Purchase Order"/>
+                      </div>
+                  </div>
+              </div>
+           <t t-set-slot="content">
+               <DropdownItem onSelected="() => this.openAddNoteModal()">
+                   ➕ Add Note
+               </DropdownItem>
+               <DropdownItem onSelected="() => this.openViewNotesModal()">
+                   📋 View Notes
+               </DropdownItem>
+           </t>
+       </Dropdown>
+   </t>
+
+    <!-- === Add Note Modal (Dialog) === -->
+    <t t-name="add_note_modal">
+        <Dialog
+            title="'Add a New Note'"
+            bodyClass="'d-flex flex-column justify-content-start gap-3'"
+            size="'md'"
+        >
+            <textarea
+                t-model="state.noteText"
+                placeholder="Write your note..."
+                rows="5"
+                class="form-control"
+                style="resize: vertical;"
+            ></textarea>
+
+            <t t-set-slot="footer">
+                <div class="d-flex justify-content-end gap-2">
+                    <button
+                        class="btn btn-secondary"
+                        t-on-click="cancel"
+                    >Cancel</button>
+                    <button
+                        class="btn btn-primary"
+                        t-on-click="saveNote"
+                    >Save</button>
+                </div>
+            </t>
+        </Dialog>
+    </t>
+
+    <!-- === View Notes Modal (Dialog) === -->
+    <t t-name="view_notes_modal">
+        <Dialog
+            title="'Your Notes'"
+            bodyClass="'d-flex flex-column justify-content-start gap-3'"
+            size="'md'"
+        >
+            <t t-if="state.notes.length">
+                <ul class="list-group">
+                    <li
+                        t-foreach="state.notes"
+                        t-as="note"
+                        t-key="note.id"
+                        class="list-group-item d-flex justify-content-between align-items-start"
+                    >
+                        <div class="flex-grow-1 me-2">
+                            <t t-if="state.editingId === note.id">
+                                <textarea
+                                    t-model="state.editText"
+                                    class="form-control form-control-sm"
+                                    rows="3"
+                                    t-on-keydown="onKeydownEdit"
+                                    t-on-blur="saveEdit"
+                                    autofocus="true"
+                                    style="white-space: pre-wrap; word-break: break-word; resize: vertical;"
+                                />
+                            </t>
+                            <t t-else="">
+                                <span style="white-space: pre-wrap; word-break: break-word;">
+                                    <t t-esc="note.text" />
+                                </span>
+                            </t>
+                        </div>
+
+                        <div class="btn-group btn-group-sm">
+                            <button
+                                class="btn btn-primary"
+                                confirm="Are you sure you want to delete this record?"
+                                t-att-data-id="note.id"
+                                t-on-click="startEdit"
+                            >
+                                ✏️
+                            </button>
+                            <button
+                                class="btn btn-danger"
+                                t-att-data-id="note.id"
+                                t-on-click="deleteNote"
+                            >
+                                🗑️
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </t>
+            <t t-else="">
+                <p class="text-muted">No notes yet.</p>
+            </t>
+
+            <t t-set-slot="footer">
+                <div class="text-end">
+                    <button
+                        class="btn btn-secondary"
+                        t-on-click="cancel"
+                    >Close</button>
+                </div>
+            </t>
+        </Dialog>
+    </t>
+</templates>
