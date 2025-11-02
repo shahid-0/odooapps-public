@@ -26,4 +26,5 @@
     },
     'images': ['static/description/banner.png'],
     'demo': [],
+    'license': 'LGPL-3',
 }
