@@ -24,5 +24,6 @@
             'sk_sticky_notes/static/src/components/sticky_note.xml',
         ]
     },
+    'images': ['static/description/banner.png'],
     'demo': [],
 }
