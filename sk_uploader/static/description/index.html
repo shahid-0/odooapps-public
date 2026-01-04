@@ -13,40 +13,27 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"/>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/sk_uploader/static/src/css/uploader_styles.css"/>
 </head>
 
-<body style="font-family: 'Poppins', sans-serif; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); margin: 0; padding: 0;">
+<body class="uploader-page">
 <div id="module-description">
 
     <!-- ======= Hire Me Section ======= -->
-    <section style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-                        padding: 25px 0;
-                        border-bottom: 1px solid rgba(255,255,255,0.15);">
+    <section class="hire-section">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-8 text-center text-md-left mb-3 mb-md-0">
-                    <h5 style="color: white; font-weight: 600; margin-bottom: 6px;">
-                        👨‍💻 Need Custom Odoo Development?
-                    </h5>
-                    <p style="color: rgba(255,255,255,0.85); margin: 0; font-size: 0.95rem;">
+                    <h5>👨‍💻 Need Custom Odoo Development?</h5>
+                    <p>
                         I specialize in advanced Odoo modules, data migration tools, performance optimization,
                         and enterprise-grade custom solutions.
                     </p>
                 </div>
                 <div class="col-md-4 text-center text-md-right">
-                    <a href="https://iamshahid.dev"
-                       target="_blank"
-                       style="display: inline-block;
-                                  background: white;
-                                  color: #2a5298;
-                                  padding: 10px 26px;
-                                  border-radius: 30px;
-                                  font-weight: 600;
-                                  text-decoration: none;
-                                  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-                                  transition: all 0.3s ease;"
-                       onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.3)';"
-                       onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 20px rgba(0,0,0,0.2)';">
+                    <a href="https://iamshahid.dev" target="_blank" class="hire-button">
                         🌐 View My Portfolio
                     </a>
                 </div>
@@ -54,29 +41,17 @@
         </div>
     </section>
 
-
     <!-- ======= Banner Section ======= -->
-    <section class="text-center"
-             style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                    padding: 60px 0;
-                    position: relative;
-                    overflow: hidden;">
-
-        <div style="position: absolute;
-                    top: 0; left: 0; right: 0; bottom: 0;
-                    background: url('data:image/svg+xml,<svg width=\'100\' height=\'100\' xmlns=\'http://www.w3.org/2000/svg\'><circle cx=\'50\' cy=\'50\' r=\'2\' fill=\'white\' opacity=\'0.1\'/></svg>') repeat;
-                    animation: float 20s infinite linear;">
-        </div>
+    <section class="banner-section">
         <div class="container py-5" style="position: relative; z-index: 1;">
-            <div style="display: inline-block; padding: 12px 30px; background: rgba(255,255,255,0.15); border-radius: 50px; margin-bottom: 25px; backdrop-filter: blur(10px);">
-                <span style="color: white; font-weight: 500; font-size: 14px; letter-spacing: 1px;">VERSION 1.0.0 • ODOO 17/18/19</span>
+            <div class="version-badge">
+                <span>VERSION 1.0.0 • ODOO 17/18/19</span>
             </div>
-            <h1 style="font-weight: 700; color: white; font-size: 3.5rem; margin-bottom: 20px; text-shadow: 0 4px 20px rgba(0,0,0,0.2);">
-                Uploader</h1>
-            <p style="font-size: 1.3rem; color: rgba(255,255,255,0.95); font-weight: 400; margin-bottom: 15px; max-width: 700px; margin-left: auto; margin-right: auto;">
+            <h1 class="banner-title">Uploader</h1>
+            <p class="banner-subtitle">
                 Enterprise-Grade Excel & CSV Import Framework for Odoo
             </p>
-            <p style="font-size: 1rem; color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto;">
+            <p class="banner-description">
                 Transform your data migration workflow with intelligent templating, advanced field mapping, and seamless
                 relational imports
             </p>
@@ -84,47 +59,44 @@
     </section>
 
     <!-- ======= Overview ======= -->
-    <section class="container my-5"
-             style="background: white; border-radius: 20px; padding: 50px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); margin-top: -30px; position: relative; z-index: 2;">
-        <div class="text-center mb-4">
-            <h2 style="font-weight: 700; color: #2d3748; font-size: 2.5rem; margin-bottom: 20px;">📌 What is
-                Uploader?</h2>
-        </div>
-        <p style="color: #4a5568; text-align: center; font-size: 1.1rem; line-height: 1.8; max-width: 900px; margin: 0 auto 30px;">
-            <strong style="color: #667eea;">Uploader</strong> is a comprehensive data import solution designed
-            specifically for Odoo environments. It eliminates the complexity of manual data entry by providing a
-            sophisticated yet intuitive framework for uploading Excel and CSV files with configurable templates,
-            intelligent field mappings, and advanced duplicate-handling strategies.
-        </p>
-        <div class="row text-center" style="margin-top: 40px;">
-            <div class="col-md-4 mb-3">
-                <div style="padding: 30px; background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%); border-radius: 15px; height: 100%;">
-                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-                        <i class="fa fa-clock-o" style="font-size: 28px; color: white;"></i>
-                    </div>
-                    <h5 style="font-weight: 600; color: #2d3748; margin-bottom: 15px;">Save 10x Time</h5>
-                    <p style="color: #4a5568; font-size: 0.95rem;">Automate data imports that would take hours manually
-                        into minutes</p>
-                </div>
+    <section class="container my-5">
+        <div class="overview-section">
+            <div class="text-center mb-4">
+                <h2 class="overview-title">📌 What is Uploader?</h2>
             </div>
-            <div class="col-md-4 mb-3">
-                <div style="padding: 30px; background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%); border-radius: 15px; height: 100%;">
-                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-                        <i class="fa fa-shield" style="font-size: 28px; color: white;"></i>
+            <p class="overview-text" style="max-width: 900px; margin: 0 auto 30px;">
+                <strong>Uploader</strong> is a comprehensive data import solution designed
+                specifically for Odoo environments. It eliminates the complexity of manual data entry by providing a
+                sophisticated yet intuitive framework for uploading Excel and CSV files with configurable templates,
+                intelligent field mappings, and advanced duplicate-handling strategies.
+            </p>
+            <div class="row text-center" style="margin-top: 40px;">
+                <div class="col-md-4 mb-3">
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper">
+                            <i class="fa fa-clock-o"></i>
+                        </div>
+                        <h5>Save 10x Time</h5>
+                        <p>Automate data imports that would take hours manually into minutes</p>
                     </div>
-                    <h5 style="font-weight: 600; color: #2d3748; margin-bottom: 15px;">Zero Errors</h5>
-                    <p style="color: #4a5568; font-size: 0.95rem;">Validate data before import with smart field
-                        detection and type checking</p>
                 </div>
-            </div>
-            <div class="col-md-4 mb-3">
-                <div style="padding: 30px; background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%); border-radius: 15px; height: 100%;">
-                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-                        <i class="fa fa-refresh" style="font-size: 28px; color: white;"></i>
+                <div class="col-md-4 mb-3">
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper">
+                            <i class="fa fa-shield"></i>
+                        </div>
+                        <h5>Zero Errors</h5>
+                        <p>Validate data before import with smart field detection and type checking</p>
                     </div>
-                    <h5 style="font-weight: 600; color: #2d3748; margin-bottom: 15px;">Reusable Templates</h5>
-                    <p style="color: #4a5568; font-size: 0.95rem;">Create once, use forever across multiple import
-                        operations</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper">
+                            <i class="fa fa-refresh"></i>
+                        </div>
+                        <h5>Reusable Templates</h5>
+                        <p>Create once, use forever across multiple import operations</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -133,32 +105,28 @@
     <!-- ======= Key Features ======= -->
     <section class="container my-5">
         <div class="text-center mb-5">
-            <h2 style="font-weight: 700; color: #2d3748; font-size: 2.5rem; margin-bottom: 20px;">✨ Powerful
-                Features</h2>
-            <p style="color: #4a5568; font-size: 1.1rem; max-width: 700px; margin: 0 auto;">Everything you need for
-                seamless data migration and import operations</p>
+            <h2 class="section-header">✨ Powerful Features</h2>
+            <p class="section-description" style="max-width: 700px; margin: 0 auto;">
+                Everything you need for seamless data migration and import operations
+            </p>
         </div>
         <div class="row text-center">
 
             <div class="col-md-4 mb-4">
-                <div style="background: white; border-radius: 20px; padding: 35px; box-shadow: 0 5px 25px rgba(0,0,0,0.08); height: 100%; transition: transform 0.3s, box-shadow 0.3s;"
-                     onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.12)';"
-                     onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 25px rgba(0,0,0,0.08)';">
-                    <i class="fa fa-exchange" style="font-size: 48px; color: #667eea; margin-bottom: 20px;"></i>
-                    <h5 style="font-weight: 600; color: #2d3748; margin-bottom: 15px;">Dynamic Field Mapping</h5>
-                    <p style="color: #4a5568; line-height: 1.7; font-size: 0.95rem;">
+                <div class="hoverable-card">
+                    <i class="fa fa-exchange"></i>
+                    <h5>Dynamic Field Mapping</h5>
+                    <p>
                         Create intelligent mappings between your Excel/CSV columns and Odoo model fields.
                     </p>
                 </div>
             </div>
 
             <div class="col-md-4 mb-4">
-                <div style="background: white; border-radius: 20px; padding: 35px; box-shadow: 0 5px 25px rgba(0,0,0,0.08); height: 100%; transition: transform 0.3s, box-shadow 0.3s;"
-                     onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.12)';"
-                     onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 25px rgba(0,0,0,0.08)';">
-                    <i class="fa fa-database" style="font-size: 48px; color: #667eea; margin-bottom: 20px;"></i>
-                    <h5 style="font-weight: 600; color: #2d3748; margin-bottom: 15px;">Smart Duplicate Handling</h5>
-                    <p style="color: #4a5568; line-height: 1.7; font-size: 0.95rem;">
+                <div class="hoverable-card">
+                    <i class="fa fa-database"></i>
+                    <h5>Smart Duplicate Handling</h5>
+                    <p>
                         Choose from three strategies: <strong>Skip</strong> (ignore duplicates), <strong>Always
                         Create</strong> (allow duplicates), or <strong>Update Existing</strong> (modify current
                         records). Define unique identifier fields to detect duplicates accurately based on your business
@@ -168,12 +136,10 @@
             </div>
 
             <div class="col-md-4 mb-4">
-                <div style="background: white; border-radius: 20px; padding: 35px; box-shadow: 0 5px 25px rgba(0,0,0,0.08); height: 100%; transition: transform 0.3s, box-shadow 0.3s;"
-                     onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.12)';"
-                     onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 25px rgba(0,0,0,0.08)';">
-                    <i class="fa fa-sitemap" style="font-size: 48px; color: #667eea; margin-bottom: 20px;"></i>
-                    <h5 style="font-weight: 600; color: #2d3748; margin-bottom: 15px;">Many2one Sub-Templates</h5>
-                    <p style="color: #4a5568; line-height: 1.7; font-size: 0.95rem;">
+                <div class="hoverable-card">
+                    <i class="fa fa-sitemap"></i>
+                    <h5>Many2one Sub-Templates</h5>
+                    <p>
                         Import complex relational data effortlessly. Sub-templates handle related records automatically
                         by searching existing entries or creating new ones. Perfect for importing products with
                         categories, contacts with companies, or any hierarchical data structure.
@@ -182,12 +148,10 @@
             </div>
 
             <div class="col-md-4 mb-4">
-                <div style="background: white; border-radius: 20px; padding: 35px; box-shadow: 0 5px 25px rgba(0,0,0,0.08); height: 100%; transition: transform 0.3s, box-shadow 0.3s;"
-                     onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.12)';"
-                     onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 25px rgba(0,0,0,0.08)';">
-                    <i class="fa fa-tasks" style="font-size: 48px; color: #667eea; margin-bottom: 20px;"></i>
-                    <h5 style="font-weight: 600; color: #2d3748; margin-bottom: 15px;">Batch Processing</h5>
-                    <p style="color: #4a5568; line-height: 1.7; font-size: 0.95rem;">
+                <div class="hoverable-card">
+                    <i class="fa fa-tasks"></i>
+                    <h5>Batch Processing</h5>
+                    <p>
                         Handle large datasets efficiently with configurable batch sizes (10, 50, 100, or custom).
                         Prevents server timeouts, reduces memory usage, and provides progress tracking. Import thousands
                         of records without compromising system performance.
@@ -199,42 +163,41 @@
     </section>
 
     <!-- ======= Core Concepts ======= -->
-    <section style="background: white; padding: 80px 0;">
+    <section class="white-bg">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 style="font-weight: 700; color: #2d3748; font-size: 2.5rem; margin-bottom: 20px;">🧩 Core
-                    Concepts</h2>
-                <p style="color: #4a5568; font-size: 1.1rem; max-width: 700px; margin: 0 auto;">Understanding the
-                    building blocks of Uploader</p>
+                <h2 class="section-header">🧩 Core Concepts</h2>
+                <p class="section-description" style="max-width: 700px; margin: 0 auto;">
+                    Understanding the building blocks of Uploader
+                </p>
             </div>
 
             <div class="row">
                 <div class="col-md-6 mb-4">
-                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 20px; padding: 40px; height: 100%; box-shadow: 0 10px 30px rgba(102,126,234,0.3);">
+                    <div class="concept-card-purple">
                         <div style="display: flex; align-items: center; margin-bottom: 25px;">
-                            <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.2); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                                <i class="fa fa-file-text-o" style="font-size: 24px; color: white;"></i>
+                            <div class="concept-icon-wrapper">
+                                <i class="fa fa-file-text-o"></i>
                             </div>
-                            <h5 style="font-weight: 600; color: white; margin: 0;">Uploader Template</h5>
+                            <h5>Uploader Template</h5>
                         </div>
-                        <p style="color: rgba(255,255,255,0.95); line-height: 1.8; margin-bottom: 25px;">
+                        <p style="margin-bottom: 25px;">
                             The foundation of your import configuration. Each template is a reusable blueprint that
                             defines how data should be imported into a specific Odoo model.
                         </p>
-                        <div style="background: rgba(255,255,255,0.15); border-radius: 12px; padding: 20px; backdrop-filter: blur(10px);">
-                            <p style="color: white; font-weight: 500; margin-bottom: 12px;">Template Components:</p>
-                            <ul style="color: rgba(255,255,255,0.95); margin: 0; padding-left: 20px;">
-                                <li style="margin-bottom: 8px;"><strong>Target Model:</strong> The Odoo model where
-                                    records will be created (e.g., Products, Contacts, Sales Orders)
+                        <div class="concept-details">
+                            <p>Template Components:</p>
+                            <ul>
+                                <li><strong>Target Model:</strong> The Odoo model where records will be created (e.g.,
+                                    Products, Contacts, Sales Orders)
                                 </li>
-                                <li style="margin-bottom: 8px;"><strong>Company Context:</strong> Multi-company support
-                                    for enterprise environments
+                                <li><strong>Company Context:</strong> Multi-company support for enterprise environments
                                 </li>
-                                <li style="margin-bottom: 8px;"><strong>Unique Identifier:</strong> Field used to detect
-                                    existing records (e.g., Internal Reference, Email, Barcode)
+                                <li><strong>Unique Identifier:</strong> Field used to detect existing records (e.g.,
+                                    Internal Reference, Email, Barcode)
                                 </li>
-                                <li style="margin-bottom: 8px;"><strong>Duplicate Strategy:</strong> Defines behavior
-                                    when matching records are found
+                                <li><strong>Duplicate Strategy:</strong> Defines behavior when matching records are
+                                    found
                                 </li>
                                 <li><strong>Field Mappings:</strong> Column-to-field associations for data
                                     transformation
@@ -245,32 +208,28 @@
                 </div>
 
                 <div class="col-md-6 mb-4">
-                    <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 20px; padding: 40px; height: 100%; box-shadow: 0 10px 30px rgba(240,147,251,0.3);">
+                    <div class="concept-card-pink">
                         <div style="display: flex; align-items: center; margin-bottom: 25px;">
-                            <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.2); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                                <i class="fa fa-link" style="font-size: 24px; color: white;"></i>
+                            <div class="concept-icon-wrapper">
+                                <i class="fa fa-link"></i>
                             </div>
-                            <h5 style="font-weight: 600; color: white; margin: 0;">Field Mapping</h5>
+                            <h5>Field Mapping</h5>
                         </div>
-                        <p style="color: rgba(255,255,255,0.95); line-height: 1.8; margin-bottom: 25px;">
+                        <p style="margin-bottom: 25px;">
                             The bridge between your source data and Odoo fields. Each mapping translates a column from
                             your file into structured database information.
                         </p>
-                        <div style="background: rgba(255,255,255,0.15); border-radius: 12px; padding: 20px; backdrop-filter: blur(10px);">
-                            <p style="color: white; font-weight: 500; margin-bottom: 12px;">Mapping Features:</p>
-                            <ul style="color: rgba(255,255,255,0.95); margin: 0; padding-left: 20px;">
-                                <li style="margin-bottom: 8px;"><strong>Smart Field Filtering:</strong> Only displays
-                                    fields compatible with the selected model
+                        <div class="concept-details">
+                            <p>Mapping Features:</p>
+                            <ul>
+                                <li><strong>Smart Field Filtering:</strong> Only displays fields compatible with the
+                                    selected model
                                 </li>
-                                <li style="margin-bottom: 8px;"><strong>Type Validation:</strong> Ensures data type
-                                    compatibility (text, number, date, boolean)
+                                <li><strong>Type Validation:</strong> Ensures data type compatibility (text, number,
+                                    date, boolean)
                                 </li>
-                                <li style="margin-bottom: 8px;"><strong>Required Field Indicators:</strong> Visual
-                                    markers for mandatory fields
-                                </li>
-                                <li style="margin-bottom: 8px;"><strong>Default Values:</strong> Set fallback values for
-                                    empty cells
-                                </li>
+                                <li><strong>Required Field Indicators:</strong> Visual markers for mandatory fields</li>
+                                <li><strong>Default Values:</strong> Set fallback values for empty cells</li>
                                 <li><strong>Data Transformation:</strong> Apply formatting rules and conversions during
                                     import
                                 </li>
@@ -286,129 +245,107 @@
     <!-- ======= Step-by-Step Usage ======= -->
     <section class="container my-5">
         <div class="text-center mb-5">
-            <h2 style="font-weight: 700; color: #2d3748; font-size: 2.5rem; margin-bottom: 20px;">
-                🚀 Step-by-Step Usage Guide
-            </h2>
-            <p style="color: #4a5568; font-size: 1.1rem; max-width: 800px; margin: 0 auto;">
+            <h2 class="section-header">🚀 Step-by-Step Usage Guide</h2>
+            <p class="section-description" style="max-width: 800px; margin: 0 auto;">
                 Learn how to configure templates and prepare your data for import
             </p>
         </div>
 
         <!-- Step 1 -->
-        <div style="background: white; border-radius: 20px; padding: 45px; box-shadow: 0 10px 40px rgba(0,0,0,0.08);">
+        <div class="step-section">
+            <h3 class="step-title">Step 1: Create a New Template</h3>
 
-            <h3 style="font-weight: 700; color: #667eea; margin-bottom: 20px;">
-                Step 1: Create a New Template
-            </h3>
-
-            <p style="color: #4a5568; font-size: 1.05rem; line-height: 1.8;">
+            <p class="step-content">
                 The first step in using the module is to create a <strong>Template</strong>.
                 A template defines how Excel or CSV data will be mapped and imported into Odoo records.
             </p>
 
-            <!-- Template Overview -->
-            <h4 style="font-weight: 600; color: #2d3748; margin-top: 35px; margin-bottom: 15px;">
-                Template Form Overview
-            </h4>
+            <h4 class="step-subtitle">Template Form Overview</h4>
 
-            <p style="color: #4a5568; line-height: 1.7;">
+            <p class="step-content">
                 When creating a new template, the form is divided into two main sections:
             </p>
 
-            <ul style="color: #4a5568; padding-left: 20px;">
+            <ul class="step-content">
                 <li>Header fields at the top</li>
                 <li>A Notebook with two configuration pages below</li>
             </ul>
 
-            <!-- Header Fields -->
-            <h4 style="font-weight: 600; color: #2d3748; margin-top: 30px; margin-bottom: 15px;">
-                Template Header Fields
-            </h4>
+            <h4 class="step-subtitle">Template Header Fields</h4>
 
-            <div style="background: #f7fafc; border-radius: 15px; padding: 30px;">
-
+            <div class="field-box">
                 <p><strong>Name</strong></p>
-                <p style="color: #4a5568;">
+                <p>
                     The name of the template. It should clearly describe the purpose of the import
                     (e.g., Customer Import, Product Update Template).
                 </p>
 
                 <p><strong>Company</strong></p>
-                <p style="color: #4a5568;">
+                <p>
                     Specifies the company for which this template is applicable.
                     Useful in multi-company environments.
                 </p>
 
                 <p><strong>Odoo Model</strong></p>
-                <p style="color: #4a5568;">
+                <p>
                     Select the Odoo model for which this template is created
                     (e.g., <code>res.partner</code>, <code>product.template</code>).
                     This determines which fields are available for mapping.
                 </p>
 
                 <p><strong>Duplicate Handling Action</strong></p>
-                <ul style="color: #4a5568; padding-left: 20px;">
+                <ul>
                     <li><strong>Always Create:</strong> Always create a new record.</li>
                     <li><strong>Update Duplicates:</strong> Update existing records.</li>
                     <li><strong>Skip Duplicates:</strong> Skip records if duplicates exist.</li>
                 </ul>
 
                 <p><strong>Unique Field</strong></p>
-                <p style="color: #4a5568;">
+                <p>
                     Field used to identify existing records (e.g., Email, Internal Reference).
                     This field is used during duplicate detection.
                 </p>
 
-                <p style="margin-top: 15px; font-style: italic; color: #718096;">
+                <p style="margin-top: 15px; font-style: italic;">
                     📸 Screenshot: Template form showing header fields
                 </p>
                 <img src="images/header-fields.png"
-
                      alt="Header Fields Image"
                      width="700px"
                      class="ml-4 rounded shadow-sm">
             </div>
 
-            <!-- State Note -->
-            <div style="margin-top: 30px; background: #edf2f7; border-left: 4px solid #667eea; padding: 20px; border-radius: 8px;">
-                <p style="margin: 0; color: #2d3748; font-weight: 600;">
-                    Important:
-                </p>
-                <p style="margin: 5px 0 0; color: #4a5568;">
+            <div class="info-box" style="margin-top: 30px;">
+                <p>Important:</p>
+                <p style="margin-top: 5px; font-weight: 400;">
                     Newly created templates are set to <strong>Draft</strong> by default.
                     To use a template for importing data, you must change its state to
                     <strong>Ready to Use</strong>.
                 </p>
-                <p style="margin: 5px 0 0; color: #4a5568;">
+                <p style="margin-top: 5px; font-weight: 400;">
                     This applies to both parent templates and all associated sub-templates.
                 </p>
             </div>
 
-            <!-- Notebook -->
-            <h4 style="font-weight: 600; color: #2d3748; margin-top: 35px; margin-bottom: 15px;">
-                Notebook Configuration
-            </h4>
+            <h4 class="step-subtitle">Notebook Configuration</h4>
 
-            <p style="color: #4a5568;">
+            <p class="step-content">
                 The template form includes a Notebook with two pages:
             </p>
 
-            <ul style="color: #4a5568; padding-left: 20px;">
+            <ul class="step-content">
                 <li>Fields Mapping</li>
                 <li>Sub Templates</li>
             </ul>
 
-            <!-- Fields Mapping -->
-            <h5 style="font-weight: 600; color: #667eea; margin-top: 25px;">
-                1. Fields Mapping
-            </h5>
+            <h5 class="step-title" style="font-size: 1.3rem; margin-top: 25px;">1. Fields Mapping</h5>
 
-            <p style="color: #4a5568;">
+            <p class="step-content">
                 This tab defines how Excel columns map to Odoo fields.
                 Each row represents a single column-to-field mapping.
             </p>
 
-            <ul style="color: #4a5568; padding-left: 20px;">
+            <ul class="step-content">
                 <li>Only basic Odoo fields are supported</li>
                 <li>Relational fields are excluded (many2one, one2many, many2many)</li>
             </ul>
@@ -416,34 +353,29 @@
             <p style="font-style: italic; color: #718096;">
                 📸 Screenshot: Fields Mapping tab with sample mappings
             </p>
-
             <img src="images/fields-mapping.png"
-
                  alt="Fields Mapping Image"
                  width="700px"
                  class="ml-4 rounded shadow-sm">
 
-            <!-- Sub Templates -->
-            <h5 style="font-weight: 600; color: #667eea; margin-top: 25px;">
-                2. Sub Templates
-            </h5>
+            <h5 class="step-title" style="font-size: 1.3rem; margin-top: 25px;">2. Sub Templates</h5>
 
-            <p style="color: #4a5568;">
+            <p class="step-content">
                 Sub Templates are used to handle relational data during the import process.
             </p>
 
-            <ul style="color: #4a5568; padding-left: 20px;">
+            <ul class="step-content">
                 <li>Only many2one fields are supported</li>
                 <li>one2many and many2many are not supported</li>
             </ul>
 
-            <p style="color: #4a5568;">
+            <p class="step-content">
                 When adding a sub-template, an additional field called
                 <strong>Mapped To Field</strong> is available.
                 This field links the sub-template to a many2one field of the parent model.
             </p>
 
-            <p style="color: #4a5568;">
+            <p class="step-content">
                 Once selected, the sub-template model is automatically determined,
                 reducing configuration errors and ensuring data consistency.
             </p>
@@ -451,9 +383,7 @@
             <p style="font-style: italic; color: #718096;">
                 📸 Screenshot: Sub Template creation with Mapped To Field highlighted
             </p>
-
             <img src="images/sub-template.png"
-
                  alt="Sub Template Image"
                  width="700px"
                  class="ml-4 rounded shadow-sm">
@@ -461,55 +391,45 @@
         </div>
     </section>
 
-    <!-- ======= Step 2: Create and Use an Uploader ======= -->
+    <!-- ======= Step 2 ======= -->
     <section class="container my-5">
-        <div style="background: white; border-radius: 20px; padding: 45px; box-shadow: 0 10px 40px rgba(0,0,0,0.08);">
+        <div class="step-section">
+            <h3 class="step-title">Step 2: Create and Use an Uploader</h3>
 
-            <h3 style="font-weight: 700; color: #667eea; margin-bottom: 20px;">
-                Step 2: Create and Use an Uploader
-            </h3>
-
-            <p style="color: #4a5568; font-size: 1.05rem; line-height: 1.8;">
+            <p class="step-content">
                 After configuring and activating the template, the next step is to create an
                 <strong>Uploader</strong>. The uploader is responsible for processing the Excel
                 file and importing data into Odoo based on the selected template configuration.
             </p>
 
-            <!-- Uploader Overview -->
-            <h4 style="font-weight: 600; color: #2d3748; margin-top: 35px; margin-bottom: 15px;">
-                Uploader Form Overview
-            </h4>
+            <h4 class="step-subtitle">Uploader Form Overview</h4>
 
-            <p style="color: #4a5568; line-height: 1.7;">
+            <p class="step-content">
                 To begin, create a new uploader record. The uploader form contains the following fields:
             </p>
 
-            <!-- Uploader Fields -->
-            <h4 style="font-weight: 600; color: #2d3748; margin-top: 30px; margin-bottom: 15px;">
-                Uploader Fields
-            </h4>
+            <h4 class="step-subtitle">Uploader Fields</h4>
 
-            <div style="background: #f7fafc; border-radius: 15px; padding: 30px;">
-
+            <div class="field-box">
                 <p><strong>Name</strong></p>
-                <p style="color: #4a5568;">
+                <p>
                     The name of the uploader. It should clearly describe the import operation
                     (e.g., Customer Import – January, Product Update Batch 1).
                 </p>
 
                 <p><strong>Template</strong></p>
-                <p style="color: #4a5568;">
+                <p>
                     Select a template that is in the <strong>Ready to Use</strong> state.
                     The uploader uses this template to determine field mappings, duplicate handling
                     rules, and sub-template behavior.
                 </p>
 
                 <p><strong>Batches</strong></p>
-                <p style="color: #4a5568;">
+                <p>
                     Defines how many records are processed per batch during the import.
                     This helps manage performance and large datasets.
                 </p>
-                <ul style="color: #4a5568; padding-left: 20px;">
+                <ul>
                     <li>10</li>
                     <li>50</li>
                     <li>100</li>
@@ -517,170 +437,128 @@
                 </ul>
 
                 <p><strong>Custom Batch</strong></p>
-                <p style="color: #4a5568;">
+                <p>
                     This field becomes available only when <strong>Custom</strong> is selected
                     in the Batches field. Enter the desired number of records to be processed
                     per batch.
                 </p>
 
                 <p><strong>File</strong></p>
-                <p style="color: #4a5568;">
+                <p>
                     Upload the Excel file containing the data to be imported.
                     The column names in the file must exactly match the
-                    <strong>File Field</strong> values defined in the template’s field mappings.
+                    <strong>File Field</strong> values defined in the template's field mappings.
                 </p>
 
-                <p style="margin-top: 15px; font-style: italic; color: #718096;">
+                <p style="margin-top: 15px; font-style: italic;">
                     📸 Screenshot: Uploader form with all fields filled
                 </p>
-
                 <img src="images/uploader-form.png"
                      alt="Uploader form image"
                      width="700px"
                      class="ml-4 rounded shadow-sm">
             </div>
 
-            <!-- Upload Process -->
-            <h4 style="font-weight: 600; color: #2d3748; margin-top: 35px; margin-bottom: 15px;">
-                Uploading the File
-            </h4>
+            <h4 class="step-subtitle">Uploading the File</h4>
 
-            <p style="color: #4a5568;">
+            <p class="step-content">
                 Once all required fields are completed and the file is uploaded, verify the following:
             </p>
 
-            <ul style="color: #4a5568; padding-left: 20px;">
+            <ul class="step-content">
                 <li>The selected template is in <strong>Ready to Use</strong> state</li>
                 <li>The batch size is correctly configured</li>
                 <li>The uploaded file matches the template structure</li>
             </ul>
 
-            <p style="color: #4a5568; margin-top: 15px;">
+            <p class="step-content">
                 Click the <strong>Upload File</strong> button to start the import process.
             </p>
 
-            <div style="margin-top: 25px; background: #edf2f7; border-left: 4px solid #667eea; padding: 20px; border-radius: 8px;">
-                <p style="margin: 0; color: #2d3748; font-weight: 600;">
-                    What happens next?
-                </p>
-                <p style="margin: 8px 0 0; color: #4a5568;">
+            <div class="info-box" style="margin-top: 25px;">
+                <p>What happens next?</p>
+                <p style="margin: 8px 0 0; font-weight: 400;">
                     After clicking <strong>Upload File</strong>, the system processes the data
                     according to:
                 </p>
-                <ul style="margin: 10px 0 0; color: #4a5568; padding-left: 20px;">
+                <ul style="margin: 10px 0 0; font-weight: 400;">
                     <li>The selected template</li>
                     <li>Duplicate handling rules</li>
-                    <li>Field
-
-
-                        <!-- ======= Many2one Handling ======= -->
-                        <section class="container my-5">
-                            <div class="text-center mb-5">
-                                <h2 style="font-weight: 700; color: #2d3748; font-size: 2.5rem; margin-bottom: 20px;">🔗
-                                    Advanced Many2one
-                                    Relationships</h2>
-                                <p style="color: #4a5568; font-size: 1.1rem; max-width: 800px; margin: 0 auto;">Handle
-                                    complex relational
-                                    data structures with nested sub-templates</p>
-                            </div>
-                            <div class="row justify-content-center">
-                                <div class="col-lg-10">
-                                    <div style="background: white; border-radius: 20px; padding: 45px; box-shadow: 0 10px 40px rgba(0,0,0,0.08);">
-                                        <p style="color: #4a5568; font-size: 1.05rem; line-height: 1.8; margin-bottom: 30px;">
-                                            Uploader's sub-template system enables sophisticated relational imports
-                                            without manual record
-                                            creation. When importing data with Many2one relationships (like Products
-                                            with Categories, or
-                                            Contacts with Companies), sub-templates automatically handle the related
-                                            records.
-                                        </p>
-
-                                        <div style="background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%); border-radius: 15px; padding: 30px; margin-bottom: 25px;">
-                                            <h5 style="font-weight: 600; color: #2d3748; margin-bottom: 20px;">How
-                                                Sub-Templates Work:</h5>
-                                            <div style="display: flex; margin-bottom: 15px;">
-                                                <div style="width: 35px; height: 35px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-right: 15px;">
-                                                    <span style="color: white; font-weight: 600;">1</span>
-                                                </div>
-                                                <div>
-                                                    <p style="color: #2d3748; font-weight: 500; margin-bottom: 5px;">
-                                                        Define Related Model
-                                                        Template</p>
-                                                    <p style="color: #4a5568; font-size: 0.95rem; margin: 0;">Create a
-                                                        separate template for
-                                                        the related model (e.g., Product Category template for importing
-                                                        products)</p>
-                                                </div>
-                                            </div>
-                                            <div style="display: flex; margin-bottom: 15px;">
-                                                <div style="width: 35px; height: 35px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-right: 15px;">
-                                                    <span style="color: white; font-weight: 600;">2</span>
-                                                </div>
-                                                <div>
-                                                    <p style="color: #2d3748; font-weight: 500; margin-bottom: 5px;">
-                                                        Link via Mapped To
-                                                        Field</p>
-                                                    <p style="color: #4a5568; font-size: 0.95rem; margin: 0;">Connect
-                                                        the sub-template to a
-                                                        Many2one field in the parent template using the <code
-                                                                style="background: #e2e8f0; padding: 2px 6px; border-radius: 4px; color: #667eea;">mapped_to</code>
-                                                        parameter</p>
-                                                </div>
-                                            </div>
-                                            <div style="display: flex;">
-                                                <div style="width: 35px; height: 35px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-right: 15px;">
-                                                    <span style="color: white; font-weight: 600;">3</span>
-                                                </div>
-                                                <div>
-                                                    <p style="color: #2d3748; font-weight: 500; margin-bottom: 5px;">
-                                                        Automatic Search or
-                                                        Create</p>
-                                                    <p style="color: #4a5568; font-size: 0.95rem; margin: 0;">The system
-                                                        searches for
-                                                        existing related records based on sub-template unique fields. If
-                                                        not found, creates
-                                                        new records automatically and links them to the parent</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div style="background: #f7fafc; border-left: 4px solid #667eea; padding: 25px; border-radius: 8px;">
-                                            <p style="color: #2d3748; font-weight: 600; margin-bottom: 12px;">💡
-                                                Real-World Example:</p>
-                                            <p style="color: #4a5568; line-height: 1.7; margin: 0;">
-                                                Importing 1000 products with categories: Instead of manually creating
-                                                categories first,
-                                                define a Product Category sub-template linked to the product's <code
-                                                    style="background: white; padding: 2px 6px; border-radius: 4px;">categ_id</code>
-                                                field.
-                                                The system will automatically find existing categories or create new
-                                                ones during the product
-                                                import, ensuring data consistency and saving hours of manual work.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </li>
+                    <li>Field mappings and data transformations</li>
                 </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ======= Many2one Handling ======= -->
+    <section class="container my-5">
+        <div class="text-center mb-5">
+            <h2 class="section-header">🔗 Advanced Many2one Relationships</h2>
+            <p class="section-description" style="max-width: 800px; margin: 0 auto;">
+                Handle complex relational data structures with nested sub-templates
+            </p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="many2one-content">
+                    <p class="step-content" style="margin-bottom: 30px;">
+                        Uploader's sub-template system enables sophisticated relational imports
+                        without manual record creation. When importing data with Many2one relationships (like Products
+                        with Categories, or Contacts with Companies), sub-templates automatically handle the related
+                        records.
+                    </p>
+
+                    <div class="gradient-bg" style="border-radius: 15px; padding: 30px; margin-bottom: 25px;">
+                        <h5 style="font-weight: 600; color: #2d3748; margin-bottom: 20px;">How Sub-Templates Work:</h5>
+
+                        <div class="process-step">
+                            <div class="step-number"><span>1</span></div>
+                            <div class="step-details">
+                                <p>Define Related Model Template</p>
+                                <p>Create a separate template for the related model (e.g., Product Category template for
+                                    importing products)</p>
+                            </div>
+                        </div>
+
+                        <div class="process-step">
+                            <div class="step-number"><span>2</span></div>
+                            <div class="step-details">
+                                <p>Link via Mapped To Field</p>
+                                <p>Connect the sub-template to a Many2one field in the parent template using the <code
+                                        style="background: #e2e8f0; padding: 2px 6px; border-radius: 4px; color: #667eea;">mapped_to</code>
+                                    parameter</p>
+                            </div>
+                        </div>
+
+                        <div class="process-step">
+                            <div class="step-number"><span>3</span></div>
+                            <div class="step-details">
+                                <p>Automatic Search or Create</p>
+                                <p>The system searches for existing related records based on sub-template unique fields.
+                                    If not found, creates new records automatically and links them to the parent</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-box">
+                        <p>💡 Real-World Example:</p>
+                        <p>
+                            Importing 1000 products with categories: Instead of manually creating
+                            categories first, define a Product Category sub-template linked to the product's
+                            <code style="background: white; padding: 2px 6px; border-radius: 4px;">categ_id</code>
+                            field.
+                            The system will automatically find existing categories or create new
+                            ones during the product import, ensuring data consistency and saving hours of manual work.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- ======= Batch Processing ======= -->
-    <!-- ======= Batch Processing ======= -->
-    <section style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                    padding: 80px 0;
-                    position: relative;
-                    overflow: hidden;">
-
-        <!-- Background pattern (FIXED) -->
-        <div style="position:absolute;
-                    top:0; left:0; right:0; bottom:0;
-                    background:url('data:image/svg+xml,<svg width=\'100\' height=\'100\' xmlns=\'http://www.w3.org/2000/svg\'><circle cx=\'50\' cy=\'50\' r=\'2\' fill=\'white\' opacity=\'0.05\'/></svg>') repeat;">
-        </div>
-
+    <section class="batch-section">
         <div class="container" style="position: relative; z-index: 1;">
             <div class="text-center mb-5">
                 <h2 style="font-weight: 700; color: white; font-size: 2.5rem; margin-bottom: 20px;">
@@ -693,73 +571,47 @@
 
             <div class="row justify-content-center">
                 <div class="col-lg-9">
-                    <div style="background: rgba(255,255,255,0.95);
-                                border-radius: 20px;
-                                padding: 40px;
-                                backdrop-filter: blur(10px);">
-
-                        <p style="color: #4a5568;
-                                  font-size: 1.05rem;
-                                  line-height: 1.8;
-                                  margin-bottom: 30px;
-                                  text-align: center;">
+                    <div class="batch-card">
+                        <p class="step-content" style="text-align: center; margin-bottom: 30px;">
                             Large file imports can overwhelm servers and cause timeouts.
                             Uploader processes your data in controlled batches to ensure
                             stability, speed, and reliability even with thousands of records.
                         </p>
 
                         <div class="row text-center">
-
                             <div class="col-md-4 mb-3">
-                                <div style="background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
-                                            padding: 25px;
-                                            border-radius: 15px;
-                                            height: 100%;">
-                                    <h3 style="color: #667eea; font-weight: 700; font-size: 2.5rem;">
-                                        10</h3>
-                                    <p style="color: #2d3748; font-weight: 600;">Quick Testing</p>
-                                    <p style="color: #4a5568; font-size: 0.9rem;">
+                                <div class="batch-number-card">
+                                    <h3 class="batch-number">10</h3>
+                                    <p class="batch-label">Quick Testing</p>
+                                    <p class="batch-description">
                                         Ideal for template validation and trial imports
                                     </p>
                                 </div>
                             </div>
 
                             <div class="col-md-4 mb-3">
-                                <div style="background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
-                                            padding: 25px;
-                                            border-radius: 15px;
-                                            height: 100%;">
-                                    <h3 style="color: #667eea; font-weight: 700; font-size: 2.5rem;">
-                                        50</h3>
-                                    <p style="color: #2d3748; font-weight: 600;">Balanced Mode</p>
-                                    <p style="color: #4a5568; font-size: 0.9rem;">
+                                <div class="batch-number-card">
+                                    <h3 class="batch-number">50</h3>
+                                    <p class="batch-label">Balanced Mode</p>
+                                    <p class="batch-description">
                                         Recommended for most production imports
                                     </p>
                                 </div>
                             </div>
 
                             <div class="col-md-4 mb-3">
-                                <div style="background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
-                                            padding: 25px;
-                                            border-radius: 15px;
-                                            height: 100%;">
-                                    <h3 style="color: #667eea; font-weight: 700; font-size: 2.5rem;">
-                                        100+</h3>
-                                    <p style="color: #2d3748; font-weight: 600;">High Volume</p>
-                                    <p style="color: #4a5568; font-size: 0.9rem;">
+                                <div class="batch-number-card">
+                                    <h3 class="batch-number">100+</h3>
+                                    <p class="batch-label">High Volume</p>
+                                    <p class="batch-description">
                                         Best for large datasets with optimized servers
                                     </p>
                                 </div>
                             </div>
-
                         </div>
 
-                        <div style="margin-top: 30px;
-                                    background: #edf2f7;
-                                    border-left: 4px solid #667eea;
-                                    padding: 20px;
-                                    border-radius: 8px;">
-                            <p style="margin: 0; color: #2d3748; font-weight: 500;">
+                        <div class="info-box" style="margin-top: 30px;">
+                            <p style="color: #2d3748; font-weight: 500;">
                                 💡 Tip:
                                 <span style="color: #4a5568; font-weight: 400;">
                                     You can also define a <strong>custom batch size</strong> based on your server capacity
@@ -767,12 +619,12 @@
                                 </span>
                             </p>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
 </div>
 </body>
 </html>

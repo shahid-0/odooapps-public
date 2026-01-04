@@ -16,5 +16,10 @@
     ],
     'images': ['static/description/banner.png'],
     'demo': [],
+    'assets': {
+        'web.assets_backend': [
+            'sk_uploader/static/src/css/uploader_styles.css',
+        ],
+    },
     'license': 'LGPL-3',
 }
