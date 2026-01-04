@@ -1,0 +1,56 @@
+<odoo>
+    <data>
+        <!-- Tree/List View -->
+        <record id="view_uploader_uploader_tree" model="ir.ui.view">
+            <field name="name">uploader.uploader.tree</field>
+            <field name="model">sk.uploader.uploader</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="name"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="view_uploader_uploader_form" model="ir.ui.view">
+            <field name="name">uploader.uploader.form</field>
+            <field name="model">sk.uploader.uploader</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button string="Upload Data" class="btn-secondary" type="object" name="upload_data"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="active" invisible="1"/>
+                                <field name="uploader_file" filename="uploader_file_name"
+                                       options="{'accepted_file_extensions': '.csv,.xls,.xlsx'}"/>
+                            </group>
+                            <group>
+                                <field name="template_id" required="1"
+                                       domain="[('state', '=', 'ready_to_use'), ('parent_id', '=', False)]"/>
+                                <field name="batches"/>
+                                <field name="custom_batch" invisible="batches != 'custom'"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_uploader_uploader" model="ir.actions.act_window">
+            <field name="name">Uploader Uploader</field>
+            <field name="res_model">sk.uploader.uploader</field>
+            <field name="view_mode">list,form,kanban</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new Uploader Uploader
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

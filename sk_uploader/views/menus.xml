@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <menuitem
+                id="main_menu_uploader"
+                name="Uploader"
+                web_icon="sk_uploader,static/description/icon.png"
+        >
+            <menuitem id="menu_uploader_uploader"
+                      name="Uploader"
+                      action="action_uploader_uploader"
+                      sequence="10"
+            />
+            <menuitem id="menu_uploader_template"
+                      name="Uploader Templates"
+                      action="action_uploader_template"
+                      sequence="20"
+            />
+        </menuitem>
+
+    </data>
+</odoo>
