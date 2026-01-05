@@ -101,6 +101,7 @@ class UploaderUploader(models.Model):
                 self._process_rows(headers, row_batch)
                 row_batch = []  # Reset the batch after processing
                 processed_rows += batch_size
+                self.env.cr.commit()
 
                 _logger.info(f"Batch {processed_rows // batch_size} processed. Total processed: {processed_rows}/{total_rows}.")
 
@@ -108,6 +109,7 @@ class UploaderUploader(models.Model):
         if row_batch:
             self._process_rows(headers, row_batch)
             processed_rows += len(row_batch)
+            self.env.cr.commit()
 
             _logger.info(f"Remaining rows processed. Total processed: {processed_rows}/{total_rows}.")
 
