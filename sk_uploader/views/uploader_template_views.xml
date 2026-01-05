@@ -1,0 +1,87 @@
+<odoo>
+    <data>
+        <!-- Tree/List View -->
+        <record id="view_uploader_template_list" model="ir.ui.view">
+            <field name="name">uploader.template.tree</field>
+            <field name="model">sk.uploader.template</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="name"/>
+                    <field name="company_ids" widget="many2many_tags"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="view_uploader_template_form" model="ir.ui.view">
+            <field name="name">uploader.template.form</field>
+            <field name="model">sk.uploader.template</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="alert alert-warning oe_edit_only" role="alert" name="warning_template"
+                             invisible="parent_id">
+                            Note: Save the parent template before creating the sub-template
+                        </div>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="active" invisible="1"/>
+                                <field name="company_ids" widget="many2many_tags"/>
+                            </group>
+                            <group>
+                                <field name="odoo_model_id" required="True"/>
+                                <field name="mapped_to" required="True"
+                                       domain="[('model_id', 'in', [parent_odoo_model_id]), ('ttype', 'in', ['many2one'])]"
+                                       invisible="not parent_id" options="{'no_create': True}"/>
+                                <field name="duplicate_handling_policy" nolable="1" options="{'horizontal': true}"
+                                       widget="radio"/>
+                                <field name="unique_field" required="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="field_mapping" string="Fields Mapping">
+                                <field name="field_mapping_lines">
+                                    <list editable="bottom" decoration-warning="is_required_field">
+                                        <field name="file_column"/>
+                                        <field name="odoo_field"
+                                               domain="[('model_id', '=', parent.odoo_model_id),('ttype', 'not in', ('many2one','one2many','many2many'))]"
+                                               options="{'no_create': True}"/>
+                                        <field name="is_required_field" column_invisible="1"/>
+                                    </list>
+                                    <form>
+                                        <field name="file_column" required="1"/>
+                                        <field name="odoo_field" required="1"/>
+                                    </form>
+                                </field>
+                            </page>
+                            <page name="sub_templates_page" string="Sub Templates">
+                                <field name="child_ids">
+                                    <list>
+                                        <field name="mapped_to"/>
+                                        <field name="name"/>
+                                        <field name="company_ids" widget="many2many_tags"/>
+                                    </list>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_uploader_template" model="ir.actions.act_window">
+            <field name="name">Uploader Template</field>
+            <field name="res_model">sk.uploader.template</field>
+            <field name="view_mode">list,form,kanban</field>
+            <field name="domain">[("parent_id", "=", False)]</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new Uploader Template
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sk_uploader_template,access.sk.uploader.template,model_sk_uploader_template,base.group_user,1,1,1,1
+access_sk_uploader_field_mapping,access.sk.uploader.field.mapping,model_sk_uploader_field_mapping,base.group_user,1,1,1,1
+access_sk_uploader_uploader,access.sk.uploader_uploader,model_sk_uploader_uploader,base.group_user,1,1,1,1
