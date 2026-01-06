@@ -1,6 +1,6 @@
 from odoo import _, api, fields, models
 from odoo.fields import Domain
-from odoo.exceptions import ValidationError
+from odoo.exceptions import ValidationError, UserError
 from odoo.orm.identifiers import NewId
 
 
@@ -12,14 +12,14 @@ class UploaderTemplate(models.Model):
 
     name = fields.Char(string='Name', required=True)
     active = fields.Boolean(string='Active', default=True)
-    state = fields.Selection([
-        ('draft', 'Draft'),
-        ('ready_to_use', 'Ready to Use'),
-    ], string='Status', default='draft')
     company_ids = fields.Many2many(
         'res.company',
         string='Company',
         default=lambda self: self.env.company
+    )
+    unique_field = fields.Char(
+        string="Unique Field (Excel Column)",
+        help="Excel column name used to check existing records"
     )
     odoo_model_id = fields.Many2one("ir.model", "Odoo Model")
     field_mapping_lines = fields.One2many(
@@ -31,6 +31,8 @@ class UploaderTemplate(models.Model):
     unique_field_id = fields.Many2one(
         'sk.uploader.field.mapping',
         'Unique Field',
+        compute='_compute_unique_field',
+        store=True,
         help="A unique field from mapping lines to check if record already exists in the database"
     )
     unique_field_id_domain = fields.Binary(
@@ -38,7 +40,7 @@ class UploaderTemplate(models.Model):
         help="This is the domain which will only show those unique fields which are the mapping fields of that template",
         compute="_compute_unique_field_id_domain"
     )
-    parent_id = fields.Many2one('sk.uploader.template', 'Parent Location', index=True, check_company=True)
+    parent_id = fields.Many2one('sk.uploader.template', 'Parent Location', index=True, check_company=True, ondelete='cascade')
     child_ids = fields.One2many('sk.uploader.template', 'parent_id', 'Sub-Templates')
     parent_odoo_model_id = fields.Integer(
         related="parent_id.odoo_model_id.id",
@@ -57,14 +59,24 @@ class UploaderTemplate(models.Model):
         ('skip_duplicates', 'Skip Duplicates'),
     ], "Duplicate Handling Action", default="skip_duplicates")
 
-    @api.onchange("mapped_to")
-    def _onchange_odoo_model_id(self):
-        for rec in self:
-            if rec.mapped_to:
-                related_model_id = self.env["ir.model"].search([('model', '=', rec.mapped_to.relation)]).id
-                rec.odoo_model_id = related_model_id
-            else:
-                rec.odoo_model_id = None
+    @api.depends('unique_field')
+    def _compute_unique_field(self):
+        for record in self:
+            record.unique_field_id = False
+
+            if not record.unique_field:
+                return
+
+            mapping_line = record.field_mapping_lines.filtered(
+                lambda l: l.file_column == record.unique_field
+            )
+
+            if not mapping_line:
+                raise UserError(
+                    f"Column '{record.unique_field}' does not exist in Field Mapping Lines."
+                )
+
+            record.unique_field_id = mapping_line[0].ids[0]
 
     @api.depends('field_mapping_lines')
     def _compute_unique_field_id_domain(self):

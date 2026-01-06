@@ -28,17 +28,7 @@ class UploaderUploader(models.Model):
     ], "Batches", default='10')
     custom_batch = fields.Integer("Custom Batch", default=0)
 
-    def check_draft_templates(self):
-        template_all_childs = self.env['sk.uploader.template'].search([("id", "child_of", self.template_id.id)])
-        draft_templates = [template.name for template in template_all_childs if template.state == 'draft']
-
-        if draft_templates:
-            draft_template_names = ', '.join(draft_templates)
-            raise UserError(
-                f"The following templates are in draft state and need to be published before proceeding: {draft_template_names}")
-
     def upload_data(self):
-        self.check_draft_templates()
         self.load_file()
 
     def load_file(self):

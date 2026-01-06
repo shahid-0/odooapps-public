@@ -18,10 +18,11 @@
             <field name="model">sk.uploader.template</field>
             <field name="arch" type="xml">
                 <form>
-                    <header>
-                        <field name="state" widget="statusbar" options="{'clickable': '1', 'fold_field': 'fold'}"/>
-                    </header>
                     <sheet>
+                        <div class="alert alert-warning oe_edit_only" role="alert" name="warning_template"
+                             invisible="parent_id">
+                            Note: Save the parent template before creating the sub-template
+                        </div>
                         <group>
                             <group>
                                 <field name="name"/>
@@ -29,14 +30,13 @@
                                 <field name="company_ids" widget="many2many_tags"/>
                             </group>
                             <group>
-                                <field name="odoo_model_id" required="True" readonly="parent_id"/>
+                                <field name="odoo_model_id" required="True"/>
                                 <field name="mapped_to" required="True"
                                        domain="[('model_id', 'in', [parent_odoo_model_id]), ('ttype', 'in', ['many2one'])]"
                                        invisible="not parent_id" options="{'no_create': True}"/>
                                 <field name="duplicate_handling_policy" nolable="1" options="{'horizontal': true}"
                                        widget="radio"/>
-                                <field name="unique_field_id" required="state == 'ready_to_use'"
-                                       domain="unique_field_id_domain" widget="selection"/>
+                                <field name="unique_field" required="1"/>
                             </group>
                         </group>
                         <notebook>

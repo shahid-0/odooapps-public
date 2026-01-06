@@ -29,8 +29,8 @@
                                        options="{'accepted_file_extensions': '.csv,.xls,.xlsx'}"/>
                             </group>
                             <group>
-                                <field name="template_id" required="1"
-                                       domain="[('state', '=', 'ready_to_use'), ('parent_id', '=', False)]"/>
+                                <field name="template_id" required="1" options="{'no_quick_create':True,'no_create_edit':True}"
+                                       domain="[('parent_id', '=', False)]"/>
                                 <field name="batches"/>
                                 <field name="custom_batch" invisible="batches != 'custom'"/>
                             </group>
