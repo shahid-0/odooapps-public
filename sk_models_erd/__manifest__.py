@@ -14,7 +14,7 @@
     'data': [
         'views/erd_view.xml',
     ],
-    'images': ['static/description/banner.png'],
+    'images': ['static/description/banner.gif'],
     'assets': {
         'web.assets_backend': [
             'sk_models_erd/static/lib/gojs/go.js',
