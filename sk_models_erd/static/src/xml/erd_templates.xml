@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="sk_models_erd.ERDClientAction">
+        <div class="o_erd_client_action">
+            <div class="o_control_panel">
+                <div class="o_cp_top">
+                    <div class="o_cp_top_left">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item active">Entity Relationship Diagram</li>
+                        </ol>
+                    </div>
+                    <div class="o_cp_top_right">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-secondary" t-on-click="downloadImage">
+                                <i class="fa fa-download"/> Download Image
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="o_erd_diagram_container" t-ref="diagramDiv"/>
+        </div>
+    </t>
+</templates>

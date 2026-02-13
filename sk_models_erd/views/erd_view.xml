@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_model_erd" model="ir.actions.client">
+        <field name="name">Entity Relationship Diagram</field>
+        <field name="tag">sk_models_erd.erd_client_action</field>
+    </record>
+
+    <record id="view_model_form_erd" model="ir.ui.view">
+        <field name="name">ir.model.form.erd</field>
+        <field name="model">ir.model</field>
+        <field name="inherit_id" ref="base.view_model_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="%(action_model_erd)d" 
+                        string="Show ERD" 
+                        type="action" 
+                        class="btn-primary"
+                        context="{'active_model_id': id}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
